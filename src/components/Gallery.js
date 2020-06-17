@@ -1,23 +1,21 @@
 import React from "react";
 import NoImages from "./NoImages";
 import Image from "./Image";
-const Gallery = props => {
-  const results = props.data;
+
+const imagearray = [
+  `https://res.cloudinary.com/stratmachine/image/upload/v1589645760/brands/soupbrand_apixpb.png`
+]
+
+const Gallery = props => {  
   let images;
   let noImages;
   // map variables to each item in fetched image array and return image component
-  if (results.length > 0) {
-    images = results.map(image => {
-      let farm = image.farm;
-      let server = image.server;
-      let id = image.id;
-      let secret = image.secret;
-      let title = image.title;
-      let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
-      //console.log(url)
-      url = `https://res.cloudinary.com/stratmachine/image/upload/v1589645760/brands/soupbrand_apixpb.png`
-      
-      return <Image url={url} key={id} alt={title} />;
+  if (imagearray.length > 0) {
+    images = imagearray.map((image, index) => {      
+      let id = index
+      let url = image
+
+      return <Image url={url} key={id} alt={'image'} />;
     });
   } else {
     noImages = <NoImages />; // return 'not found' component if no images fetched
