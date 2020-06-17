@@ -37,11 +37,11 @@ class App extends Component {
 
               <Route
                 path="/mountain"
-                render={() => <Item searchTerm="mountain" />}
+                render={() => <Item searchTerm="QRCode" />}
               />
-              <Route path="/beach" render={() => <Item searchTerm="beach" />} />
-              <Route path="/bird" render={() => <Item searchTerm="bird" />} />
-              <Route path="/food" render={() => <Item searchTerm="food" />} />
+              <Route path="/beach" render={() => <Item searchTerm="Video" />} />
+              <Route path="/bird" render={() => <Item searchTerm="Audio" />} />
+              <Route path="/food" render={() => <Item searchTerm="Chat" />} />
               <Route
                 path="/search/:searchInput"
                 render={props => (

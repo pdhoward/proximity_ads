@@ -26,3 +26,5 @@ Create a config.js file in components folder. In config.js file write
 - Flickr API
 
 
+https://github.com/Yog9/SnapShot
+
